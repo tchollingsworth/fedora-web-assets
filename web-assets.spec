@@ -7,7 +7,7 @@ BuildArch:      noarch
 License:        MIT
 URL:            https://fedoraproject.org/wiki/User:Patches/PackagingDrafts/Web_Assets
 
-Source1:        web-assets-LICENSE
+Source1:        LICENSE
 Source2:        macros.web-assets
 Source3:        web-assets.conf
 
@@ -43,7 +43,7 @@ Requires(postun): systemd
 
 %prep
 %setup -c -T
-cp %{SOURCE2} LICENSE
+cp %{SOURCE1} LICENSE
 
 %build
 #nothing to do
