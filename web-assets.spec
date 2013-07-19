@@ -1,5 +1,5 @@
 Name:           web-assets
-Version:        1
+Version:        2
 Release:        1%{?dist}
 Summary:        A simple framework for bits pushed to browsers
 BuildArch:      noarch
@@ -77,6 +77,11 @@ systemctl reload-or-try-restart httpd.service || :
 %doc LICENSE
 
 %changelog
+* Fri Jul 19 2013 T.C. Hollingsworth <tchollingsworth@gmail.com> - 2-1
+- rename the license now that we have proper git
+- prefix httpd-exported directory with an underscore (thanks to Joe Orton)
+- add "Require all granted" (thanks to Remi Collet)
+- alias /usr/share/javascript explictly
+
 * Thu Jul 11 2013 T.C. Hollingsworth <tchollingsworth@gmail.com> - 1-1
 - initial package
-
