@@ -53,6 +53,7 @@ mkdir -p %{buildroot}%{_datadir}/web-assets
 mkdir -p %{buildroot}%{_datadir}/javascript
 
 ln -sf ../javascript %{buildroot}%{_datadir}/web-assets/javascript
+ln -sf ../javascript %{buildroot}%{_datadir}/web-assets/js
 ln -sf ../fonts %{buildroot}%{_datadir}/web-assets/fonts
 
 install -Dpm0644 %{SOURCE2} %{buildroot}%{_rpmconfigdir}/macros.d/macros.web-assets
