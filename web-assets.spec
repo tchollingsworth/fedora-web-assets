@@ -1,5 +1,5 @@
 Name:           web-assets
-Version:        2
+Version:        3
 Release:        1%{?dist}
 Summary:        A simple framework for bits pushed to browsers
 BuildArch:      noarch
@@ -49,11 +49,11 @@ cp %{SOURCE1} LICENSE
 #nothing to do
 
 %install
-mkdir -p %{buildroot}%{_datadir}/assets
+mkdir -p %{buildroot}%{_datadir}/web-assets
 mkdir -p %{buildroot}%{_datadir}/javascript
 
-ln -sf ../javascript %{buildroot}%{_datadir}/assets/javascript
-ln -sf ../fonts %{buildroot}%{_datadir}/assets/fonts
+ln -sf ../javascript %{buildroot}%{_datadir}/web-assets/javascript
+ln -sf ../fonts %{buildroot}%{_datadir}/web-assets/fonts
 
 install -Dpm0644 %{SOURCE2} %{buildroot}%{_rpmconfigdir}/macros.d/macros.web-assets
 install -Dpm0644 %{SOURCE3} %{buildroot}%{_sysconfdir}/httpd/conf.d/web-assets.conf
@@ -65,7 +65,7 @@ systemctl reload-or-try-restart httpd.service || :
 systemctl reload-or-try-restart httpd.service || :
 
 %files filesystem
-%{_datadir}/assets
+%{_datadir}/web-assets
 %{_datadir}/javascript
 
 %files devel

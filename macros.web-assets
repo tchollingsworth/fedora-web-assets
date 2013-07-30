@@ -1,4 +1,4 @@
-%_assetdir %{_datadir}/assets
+%_webassetdir %{_datadir}/web-assets
 %_jsdir %{_datadir}/javascript
 
 %js_includes() %{expand: \
