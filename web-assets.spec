@@ -78,6 +78,10 @@ systemctl reload-or-try-restart httpd.service || :
 %doc LICENSE
 
 %changelog
+* Tue Jul 30 2013 T.C. Hollingsworth <tchollingsworth@gmail.com> - 3-1
+- rename directories per discussion on lists
+- provide a /_sysassets/js shortcut
+
 * Fri Jul 19 2013 T.C. Hollingsworth <tchollingsworth@gmail.com> - 2-1
 - rename the license now that we have proper git
 - prefix httpd-exported directory with an underscore (thanks to Joe Orton)
